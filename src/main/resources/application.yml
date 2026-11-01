@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: entechilavu
+  datasource:
+    url: jdbc:postgresql://localhost:5432/expense_manager
+    username: expense_user
+    password: admin@123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+app:
+  jwt:
+    secret: "fgdsjfgdsjfgdsjafkasbfdsjvdjbncdsajbfsjdfdsjfhdsjfavjfvdajs"
+    expiration-ms: 3600000
