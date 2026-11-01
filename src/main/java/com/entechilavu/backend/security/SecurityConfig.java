@@ -38,7 +38,10 @@ public class SecurityConfig {
                 // Disabled because REST APIs are stateless
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/register",
-                                "/api/auth/login").permitAll() // Registration/Login public endpoints
+                                "/api/auth/login",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/v3/api-docs/**").permitAll() // Registration/Login public endpoints
                         .requestMatchers("/api/admin/**").hasRole("ADMIN") // Role restriction
                         .anyRequest().authenticated())
                 // Inject JWT verification before processing standard credentials
