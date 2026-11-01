@@ -20,7 +20,7 @@ public class CategoryController {
     CategoryService categoryService;
 
 
-    @PostMapping("create")
+    @PostMapping("/create")
     public ResponseEntity<ResponseDto> createCategory(@RequestBody CategoryDto categoryDto) {
         categoryService.createCategory(categoryDto);
         return ResponseEntity.status(HttpStatus.OK)

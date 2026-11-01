@@ -18,11 +18,11 @@ public class TransactionRequest {
 
     private String description;
 
-    private String category;
+    private Long categoryId;
 
     private BigDecimal amount;
 
-    private String paymentMode;
+    private Long paymentModeId;
 
     private String transactionType;
 
