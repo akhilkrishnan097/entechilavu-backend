@@ -1,6 +1,9 @@
 spring:
+  profiles:
+    active: prod
   application:
     name: entechilavu
+
   datasource:
     url: jdbc:postgresql://localhost:5432/expense_manager
     username: expense_user
