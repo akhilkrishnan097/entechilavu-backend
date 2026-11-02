@@ -23,10 +23,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: temurin
+          distribution: 'temurin'
+          cache: maven
 
-      - name: Build Spring Boot application
-        run: ./mvnw clean package -DskipTests
+      - name: Build with Maven
+        run: mvn -B clean verify -DskipTests
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
